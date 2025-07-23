@@ -1,0 +1,31 @@
+<header class="bg-white shadow-md">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="/" class="text-xl font-bold text-blue-600 flex items-center gap-2">
+      <i class="fa-solid fa-house text-blue-500"></i> MiniSocial
+    </a>
+
+    <nav class="flex gap-4 items-center text-gray-700">
+      {{#if user}}
+        <span class="flex items-center gap-1">
+          <i class="fa-solid fa-user text-blue-500"></i> {{user.username}}
+        </span>
+
+        <a href="/profile" class="hover:text-blue-600 flex items-center gap-1">
+          <i class="fa-solid fa-address-card"></i> Cá nhân
+        </a>
+
+        <button id="logout-btn" class="hover:text-red-600 flex items-center gap-1">
+          <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+        </button>
+      {{else}}
+        <a href="/login" class="hover:text-blue-600 flex items-center gap-1">
+          <i class="fa-solid fa-right-to-bracket"></i> Đăng nhập
+        </a>
+
+        <a href="/register" class="hover:text-blue-600 flex items-center gap-1">
+          <i class="fa-solid fa-user-plus"></i> Đăng ký
+        </a>
+      {{/if}}
+    </nav>
+  </div>
+</header>

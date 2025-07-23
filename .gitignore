@@ -19,3 +19,5 @@ Thumbs.db
 # IDE config
 .vscode/
 .idea/
+
+public/css/
